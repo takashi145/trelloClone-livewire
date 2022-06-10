@@ -28,11 +28,17 @@ class CardList extends Component
         ]);
         $this->cardName = "";
     }
+    
+    public function destroyCard($id)
+    {
+        Card::findOrFail($id)->delete();
+    }
 
     public function createTask()
     {
         dd($this->taskName);
     }
+    
 
     public function render()
     {

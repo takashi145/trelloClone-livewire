@@ -4,7 +4,14 @@
         <div class="col-5 col-md-3">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title border-bottom border-1">{{ $card->name }}</h5>
+                    <div class="border-bottom d-flex justify-content-between">
+                        <h5 class="card-title">{{ $card->name }}</h5>
+                        <form wire:submit.prevent="destroyCard({{ $card->id }})" class="">
+                            <button class="btn btn-link text-danger card-text">
+                                削除
+                            </button>
+                        </form>
+                    </div>
                     @for($j = 0; $j < rand(1, 10); $j++)
                     <p class="card-text">task</p>
                     @endfor
