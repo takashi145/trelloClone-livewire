@@ -24,8 +24,7 @@
     </div>
   </main>
   
-  
-  @livewireScripts
   <script src="{{ mix('js/app.js') }}"></script>
+  @livewireScripts
 </body>
 </html>
