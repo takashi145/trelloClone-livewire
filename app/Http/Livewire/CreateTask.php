@@ -10,8 +10,6 @@ class CreateTask extends Component
     public $card;
     public $taskName;
 
-    public function mount(){}
-
     protected $rules = [
         'taskName' => 'required|max:30'
     ];
