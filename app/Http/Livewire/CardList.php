@@ -11,6 +11,8 @@ class CardList extends Component
         'createdCard' => 'createdCard',
         'updatedCard' => 'updatedCard',
         'deletedCard' => 'deletedCard',
+        'createdTask' => 'createdTask',
+        'deletedTask' => 'deletedTask',
     ];
 
     public function createdCard(){}
@@ -19,10 +21,14 @@ class CardList extends Component
 
     public function deletedCard(){}
 
+    public function createdTask(){}
+
+    public function deletedTask(){}
+
     public function render()
     {
         return view('livewire.card-list', [
-            'cards' => Card::all()
+            'cards' => Card::with('tasks')->get()
         ]);
     }
 }

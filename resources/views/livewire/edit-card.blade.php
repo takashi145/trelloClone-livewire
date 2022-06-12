@@ -1,4 +1,5 @@
 <div>
+    {{ $cardName}}
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal">
         編集
     </button>
@@ -11,7 +12,7 @@
                 </div>
                 <form wire:submit.prevent="updateCard">
                     <div class="modal-body">
-                        <input type="text" wire:model.defer="name" class="form-control">
+                        <input value="{{ $cardName }}" class="form-control">
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">更新</button>

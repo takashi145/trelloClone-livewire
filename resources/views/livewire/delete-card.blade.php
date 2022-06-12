@@ -1,5 +1,5 @@
 <div>
-    <button wire:click="destroyCard()" class="btn btn-link text-danger card-text">
+    <button wire:click="destroyCard()" class="btn btn-danger">
         削除
     </button>
 </div>
