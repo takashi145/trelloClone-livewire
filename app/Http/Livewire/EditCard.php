@@ -8,24 +8,24 @@ use Livewire\Component;
 class EditCard extends Component
 {
     public $card;
-    public $name;
-    public $isOpen;
+    public $cardName;
 
     public function mount()
     {
-        $this->name = $this->card->name;
+        $this->cardName = $this->card->name;
     }
 
     public function closeModal()
     {
-        $this->name = $this->card->name;
+        $this->cardName = $this->card->name;
     }
 
     public function updateCard()
     {
-        Card::findOrFail($this->card->id)->update([
-            'name' => $this->name
+        $this->card->update([
+            'name' => $this->cardName
         ]);
+
         $this->emit('updatedCard');
     }
     
