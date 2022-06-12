@@ -8,17 +8,6 @@ use Livewire\Component;
 class EditCard extends Component
 {
     public $card;
-    public $cardName;
-
-    public function mount()
-    {
-        $this->cardName = $this->card->name;
-    }
-
-    public function closeModal()
-    {
-        $this->cardName = $this->card->name;
-    }
 
     public function updateCard()
     {

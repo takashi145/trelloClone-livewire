@@ -25,6 +25,7 @@ class CreateCard extends Component
         Card::create([
             'name' => $this->cardName
         ]);
+        
         $this->emit('createdCard');
         $this->reset();
     }
